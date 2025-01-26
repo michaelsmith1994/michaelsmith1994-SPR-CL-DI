@@ -25,15 +25,17 @@ import org.springframework.stereotype.Component;
 @ComponentScan(basePackages = "com.revature.components")
 @Component
 public class ArithmeticPresentationLayer {
-
+    @Autowired
     private Adder adder;
+    @Autowired
     private Multiplier multiplier;
+    @Autowired
     private Squarer squarer;
-
+    
     public void setMultiplier(Multiplier multiplier) {
         this.multiplier = multiplier;
     }
-
+    
     public ArithmeticPresentationLayer(Squarer squarer) {
         this.squarer = squarer;
     }
